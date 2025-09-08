@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-greeting',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './greeting.component.html',
-  styleUrl: './greeting.component.scss'
+  styleUrl: './greeting.component.scss',
 })
 export class GreetingComponent {
-
+public name:string = '';
 }

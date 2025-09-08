@@ -1,1 +1,12 @@
-<p>greeting works!</p>
+<div>
+  <h2>Saludo</h2>
+  <input type="text" [(ngModel)]="name" placeholder="Escribe tu nombre" />
+
+  @if (name) {
+  <p>
+    Hola, <strong>{{ name }}</strong> 👋
+  </p>
+  } @else {
+  <p>Escribe tu nombre para ser saludado.</p>
+  }
+</div>
