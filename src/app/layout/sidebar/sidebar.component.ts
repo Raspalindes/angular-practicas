@@ -18,6 +18,7 @@ export class SidebarComponent {
   menuOptions: MenuOption[] = [
     { route: '/counter', label: 'Contador' },
     { route: '/toggle', label: 'Interruptor' },
-    // Aqui se añaden mas rutas
+    { route: '/greeting', label: 'Saludar' },
+    
   ];
 }

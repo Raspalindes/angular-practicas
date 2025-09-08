@@ -9,13 +9,18 @@ export const routes: Routes = [
   {
     path: 'counter',
     loadComponent: () =>
-      import('./pages/counter/counter.component').then((m) => m.CounterComponent),
+      import('./pages/counter/counter.component').then(
+        (m) => m.CounterComponent
+      ),
   },
   {
     path: 'toggle',
     loadComponent: () =>
       import('./pages/toggle/toggle.component').then((m) => m.ToggleComponent),
   },
-
-  // Añade más rutas aquí si lo necesitas
+  {
+    path: 'greeting',
+    loadComponent: () =>
+      import('./pages/greeting/greeting.component').then((m) => m.GreetingComponent),
+  },
 ];
