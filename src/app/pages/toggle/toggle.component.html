@@ -1,0 +1,12 @@
+<div>
+  <h2>Interruptor</h2>
+  <button type="button" (click)="toggle()">
+    {{ isOn ? "Apagar" : "Encender" }}
+  </button>
+  <p>
+    Estado:
+    <strong [style.color]="isOn ? 'green' : 'red'">{{
+      isOn ? "Encendido" : "Apagado"
+    }}</strong>
+  </p>
+</div>

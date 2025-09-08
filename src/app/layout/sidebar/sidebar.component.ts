@@ -17,7 +17,7 @@ interface MenuOption {
 export class SidebarComponent {
   menuOptions: MenuOption[] = [
     { route: '/counter', label: 'Contador' },
-    { route: '/Lista', label: 'Lista' },
+    { route: '/toggle', label: 'Interruptor' },
     // Aqui se añaden mas rutas
   ];
 }
