@@ -13,4 +13,6 @@ export const routes: Routes = [
         (m) => m.CounterComponent
       ),
   },
+ 
+  // Añade más rutas aquí si lo necesitas
 ];

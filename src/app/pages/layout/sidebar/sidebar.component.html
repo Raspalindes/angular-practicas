@@ -1,0 +1,15 @@
+<nav class="sidebar">
+  <ul>
+    @for (item of menuOptions; track item.route) {
+    <li>
+      <a
+        [routerLink]="item.route"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        {{ item.label }}
+      </a>
+    </li>
+    }
+  </ul>
+</nav>
