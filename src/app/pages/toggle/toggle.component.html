@@ -1,12 +1,21 @@
-<div>
+<div class="toggle-container">
   <h2>Interruptor</h2>
-  <button type="button" (click)="toggle()">
-    {{ isOn ? "Apagar" : "Encender" }}
-  </button>
-  <p>
-    Estado:
-    <strong [style.color]="isOn ? 'green' : 'red'">{{
-      isOn ? "Encendido" : "Apagado"
-    }}</strong>
-  </p>
+
+  <div class="toggle-section">
+    <button
+      type="button"
+      (click)="toggle()"
+      class="toggle-button"
+      [class.active]="isOn"
+    >
+      {{ isOn ? "Apagar" : "Encender" }}
+    </button>
+
+    <div class="status-display">
+      <span class="status-label">Estado:</span>
+      <strong class="status-value" [class.on]="isOn" [class.off]="!isOn">
+        {{ isOn ? "Encendido" : "Apagado" }}
+      </strong>
+    </div>
+  </div>
 </div>

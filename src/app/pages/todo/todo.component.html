@@ -1,0 +1,29 @@
+<div class="todo-container">
+  <h2>Lista de Tareas</h2>
+
+  <div class="input-section">
+    <input
+      type="text"
+      [(ngModel)]="task"
+      placeholder="Escribe una nueva tarea..."
+      (keyup.enter)="addTask()"
+      class="task-input"
+    />
+    <button type="button" (click)="addTask()" class="add-button">Añadir</button>
+  </div>
+
+  @if (tasks.length > 0) {
+  <ul class="task-list">
+    @for (task of tasks; track $index) {
+    <li class="task-item">
+      <span class="task-text">{{ task }}</span>
+      <button type="button" (click)="removeTask($index)" class="remove-button">
+        Eliminar
+      </button>
+    </li>
+    }
+  </ul>
+  } @else {
+  <p class="empty-message">No hay tareas pendientes</p>
+  }
+</div>

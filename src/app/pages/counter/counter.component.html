@@ -1,4 +1,25 @@
-<h2>Contador Angular</h2>
-<h2>Valor: {{ counter }}</h2>
-<button (click)="increaseCounter()">+</button>
-<button (click)="decreaseCounter()">-</button>
+<div class="counter-container">
+  <h2>Contador Angular</h2>
+
+  <div class="counter-display">
+    <span class="counter-label">Valor:</span>
+    <span class="counter-value">{{ counter }}</span>
+  </div>
+
+  <div class="counter-buttons">
+    <button
+      type="button"
+      (click)="decreaseCounter()"
+      class="counter-button decrease"
+    >
+      -
+    </button>
+    <button
+      type="button"
+      (click)="increaseCounter()"
+      class="counter-button increase"
+    >
+      +
+    </button>
+  </div>
+</div>

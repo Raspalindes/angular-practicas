@@ -1,12 +1,24 @@
-<div>
-  <h2>Saludo</h2>
-  <input type="text" [(ngModel)]="name" placeholder="Escribe tu nombre" />
+<div class="greeting-container">
+  <h2>Saludo Personalizado</h2>
 
-  @if (name) {
-  <p>
-    Hola, <strong>{{ name }}</strong> 👋
-  </p>
-  } @else {
-  <p>Escribe tu nombre para ser saludado.</p>
-  }
+  <div class="input-section">
+    <input
+      type="text"
+      [(ngModel)]="name"
+      placeholder="Escribe tu nombre..."
+      class="name-input"
+    />
+  </div>
+
+  <div class="greeting-display">
+    @if (name && name.trim().length > 0) {
+    <p class="greeting-message">
+      Hola, <strong class="name-highlight">{{ name.trim() }}</strong> 👋
+    </p>
+    } @else {
+    <p class="placeholder-message">
+      Escribe tu nombre para recibir un saludo personalizado
+    </p>
+    }
+  </div>
 </div>

@@ -21,6 +21,15 @@ export const routes: Routes = [
   {
     path: 'greeting',
     loadComponent: () =>
-      import('./pages/greeting/greeting.component').then((m) => m.GreetingComponent),
+      import('./pages/greeting/greeting.component').then(
+        (m) => m.GreetingComponent
+      ),
+  },
+  {
+    path: 'todo',
+    loadComponent: () =>
+      import('./pages/todo/todo.component').then(
+        (m) => m.TodoComponent
+      ),
   },
 ];

@@ -19,6 +19,6 @@ export class SidebarComponent {
     { route: '/counter', label: 'Contador' },
     { route: '/toggle', label: 'Interruptor' },
     { route: '/greeting', label: 'Saludar' },
-    
+    { route: '/todo', label: 'Tareas' },
   ];
 }

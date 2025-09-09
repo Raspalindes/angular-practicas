@@ -1,0 +1,77 @@
+.greeting-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+
+  h2 {
+    color: #333;
+    margin-bottom: 30px;
+  }
+
+  .input-section {
+    margin-bottom: 30px;
+
+    .name-input {
+      width: 100%;
+      max-width: 300px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      text-align: center;
+
+      &:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+      }
+
+      &::placeholder {
+        color: #6c757d;
+      }
+    }
+  }
+
+  .greeting-display {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+
+    .greeting-message {
+      font-size: 24px;
+      color: #333;
+      margin: 0;
+      animation: fadeIn 0.3s ease-in;
+
+      .name-highlight {
+        color: #007bff;
+        font-size: 26px;
+      }
+    }
+
+    .placeholder-message {
+      font-size: 16px;
+      color: #6c757d;
+      font-style: italic;
+      margin: 0;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
