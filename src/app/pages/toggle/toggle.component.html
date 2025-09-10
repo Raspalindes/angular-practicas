@@ -8,13 +8,13 @@
       class="toggle-button"
       [class.active]="isOn"
     >
-      {{ isOn ? "Apagar" : "Encender" }}
+      {{ isOn ? toggleLiterals.off : toggleLiterals.on }}
     </button>
 
     <div class="status-display">
       <span class="status-label">Estado:</span>
       <strong class="status-value" [class.on]="isOn" [class.off]="!isOn">
-        {{ isOn ? "Encendido" : "Apagado" }}
+        {{ isOn ? toggleLiterals.on : toggleLiterals.off }}
       </strong>
     </div>
   </div>

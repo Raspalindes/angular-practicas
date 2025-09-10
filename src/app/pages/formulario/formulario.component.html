@@ -1,0 +1,40 @@
+<form [formGroup]="personalDataForm">
+  <div>
+    <label for="id">ID</label>
+    <input id="id" type="text" formControlName="id" />
+  </div>
+  <div>
+    <label for="name">Nombre</label>
+    <input id="name" type="text" formControlName="name" />
+    @if (isInvalidField('name')) {
+    <div>El nombre es obligatorio.</div>
+    }
+  </div>
+  <div>
+    <label for="surname">Apellido</label>
+    <input id="surname" type="text" formControlName="surname" />
+    @if (isInvalidField('surname') === 'error') {
+    <div>El apellido es obligatorio.</div>
+    }
+  </div>
+  <div>
+    <label for="age">Edad</label>
+    <input id="age" type="number" formControlName="age" />
+    @if (isInvalidField('age') === 'error') {
+    <div>Debe ser mayor o igual a 18.</div>
+    }
+  </div>
+  <div>
+    <label>
+      <input type="checkbox" formControlName="isMarried" />
+      Casado
+    </label>
+  </div>
+  <button (click)="submit()" type="button">Enviar</button>
+</form>
+
+@if(personalData){
+{{ personalData | json }}
+}
+
+<button (click)="resetForm()">Reset Form</button>

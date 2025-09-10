@@ -20,5 +20,6 @@ export class SidebarComponent {
     { route: '/toggle', label: 'Interruptor' },
     { route: '/greeting', label: 'Saludar' },
     { route: '/todo', label: 'Tareas' },
+    { route: '/formulario', label: 'Formulario' },
   ];
 }

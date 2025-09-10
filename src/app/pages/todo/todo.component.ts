@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './todo.component.scss',
 })
 export class TodoComponent {
-  public task: string = '';
+  public task = '';
   public tasks: string[] = [];
 
   public addTask(): void {

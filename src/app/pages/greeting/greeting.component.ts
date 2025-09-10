@@ -8,5 +8,5 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './greeting.component.scss',
 })
 export class GreetingComponent {
-public name:string = '';
+  public name = '';
 }

@@ -28,8 +28,11 @@ export const routes: Routes = [
   {
     path: 'todo',
     loadComponent: () =>
-      import('./pages/todo/todo.component').then(
-        (m) => m.TodoComponent
-      ),
+      import('./pages/todo/todo.component').then((m) => m.TodoComponent),
+  },
+  {
+    path: 'formulario',
+    loadComponent: () =>
+      import('./pages/formulario/formulario.component').then((m) => m.FormularioComponent),
   },
 ];

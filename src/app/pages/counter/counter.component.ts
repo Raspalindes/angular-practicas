@@ -9,10 +9,10 @@ import { Component } from '@angular/core';
 export class CounterComponent {
   public counter: number = 0;
 
-  increaseCounter() {
+  public increaseCounter(): void {
     this.counter++;
   }
-  decreaseCounter() {
+  public decreaseCounter(): void {
     this.counter--;
   }
 }
