@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './counter.component.scss',
 })
 export class CounterComponent {
-  public counter: number = 0;
+  public counter = 0;
 
   public increaseCounter(): void {
     this.counter++;
